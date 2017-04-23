@@ -21,6 +21,7 @@ foreach ($result as $k=>$v){
     echo $k;
     echo "<br />";
     foreach ($v as $value) {
-        echo "<a href='$value[1]' target='_blank'>$value[0]</a> 更新时间 $value[2]<br/>";
+        //过滤空数据
+        if($value[1]) echo "<a href='$value[1]' target='_blank'>$value[0]</a> 更新时间 $value[2]<br/>";
     }
 }
